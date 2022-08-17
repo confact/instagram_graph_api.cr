@@ -1,0 +1,9 @@
+name: instagram_graph_api
+version: 0.1.0
+
+authors:
+  - Håkan Nylén <hakan@dun.se>
+
+crystal: 1.4.1
+
+license: MIT
