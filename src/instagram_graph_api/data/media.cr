@@ -44,6 +44,7 @@ module InstagramGraphApi
     
       def post_type : String
         return "reels" if media_product_type == "REELS"
+        return "story" if media_product_type == "STORY"
         case media_type
         when "CAROUSEL_ALBUM"
           "image"
