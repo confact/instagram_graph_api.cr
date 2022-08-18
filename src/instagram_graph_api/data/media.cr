@@ -10,7 +10,7 @@ module InstagramGraphApi
       property permalink : String
       property timestamp : Time
       property id : String
-      property caption : String?
+      property caption : String = ""
       property shortcode : String
       property media_product_type : String
       property video_url : String? # only for reels and video
