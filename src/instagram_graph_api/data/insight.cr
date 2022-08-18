@@ -16,6 +16,7 @@ module InstagramGraphApi
         include JSON::Serializable
 
         property value : Int32
+        property end_time : Time?
       end
     end
   end 

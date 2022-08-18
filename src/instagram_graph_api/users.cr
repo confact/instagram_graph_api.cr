@@ -16,7 +16,7 @@ module InstagramGraphApi
         if period == "lifetime"
           get_connections(ig_account_id, "insights?metric=#{metrics}&period=#{period}")
         else
-          get_connections(ig_account_id, "insights?metric=#{metrics}&since=#{since_time.to_unix}&until=#{until_time.to_unix}&period=#{period}")
+          Array(Data::Insight).from_json(get_connections(ig_account_id, "insights?metric=#{metrics}&since=#{since_time.to_unix}&until=#{until_time.to_unix}&period=#{period}").to_json)
         end
       end
 
