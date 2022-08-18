@@ -32,7 +32,7 @@ module InstagramGraphApi
         fields ||= "id,name,biography,ig_id,followers_count,profile_picture_url,username,media_count,website"
         accounts = get_pages("?fields=instagram_business_account{#{fields}}").as_a
         Array(Data::BusinessAccount).from_json(accounts.map do |a|
-          a.as_h["instagram_business_account"]
+          a.as_h["instagram_business_account"]?
         end.compact.to_json)
       end
 
