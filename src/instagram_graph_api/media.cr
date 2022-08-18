@@ -6,7 +6,8 @@ module InstagramGraphApi
       METRIC_HASH = {
         "image": "impressions,reach",
         "video": "impressions,reach,video_views",
-        "story": "impressions,replies,reach,taps_forward,taps_back,exits"
+        "story": "impressions,replies,reach,taps_forward,taps_back,exits",
+        "reels":  "comments,likes,plays,reach,saved,shares,total_interactions"
       }
 
       MEDIA_INFO_HASH = {
@@ -34,7 +35,7 @@ module InstagramGraphApi
       end
 
       def insights(media_id : String, type = "image", metrics : String? = nil) : Array(Data::Insight)
-        metrics ||= METRIC_HASH[type]
+        metrics ||= METRIC_HASH[type.downcase]
         Array(Data::Insight).from_json(get_connections(media_id , "insights?metric=#{metrics}").to_json)
       end
     end
