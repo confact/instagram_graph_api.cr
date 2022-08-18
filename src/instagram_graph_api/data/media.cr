@@ -19,6 +19,9 @@ module InstagramGraphApi
       property like_count : Int32?
       property comments_count : Int32?
 
+      property impressions : Int32?
+      property reach : Int32?
+
       def likes
         like_count
       end

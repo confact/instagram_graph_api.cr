@@ -21,7 +21,7 @@ module InstagramGraphApi
       end
 
       def connected_ig_accounts(fields = nil) : Array(Data::BusinessAccount)
-        fields ||= "id,name,biography,ig_id,followers_count,profile_picture_url,username"
+        fields ||= "id,name,biography,ig_id,followers_count,profile_picture_url,username,media_count,website"
         accounts = get_pages("?fields=connected_instagram_account{#{fields}}")
         Array(Data::BusinessAccount).from_json(accounts.map do |a|
           a.as_h
@@ -29,7 +29,7 @@ module InstagramGraphApi
       end
 
       def ig_business_accounts(fields = nil) : Array(Data::BusinessAccount)
-        fields ||= "id,name,biography,ig_id,followers_count,profile_picture_url,username"
+        fields ||= "id,name,biography,ig_id,followers_count,profile_picture_url,username,media_count,website"
         accounts = get_pages("?fields=instagram_business_account{#{fields}}").as_a
         Array(Data::BusinessAccount).from_json(accounts.map do |a|
           a.as_h["instagram_business_account"]
