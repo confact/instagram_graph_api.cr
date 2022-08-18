@@ -16,8 +16,8 @@ module InstagramGraphApi
       property video_url : String? # only for reels and video
       
       #likes and comments only on image and video
-      property like_count : Int32?
-      property comments_count : Int32?
+      property like_count : Int32 = 0
+      property comments_count : Int32 = 0
 
       property impressions : Int32?
       property reach : Int32?
