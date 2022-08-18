@@ -11,9 +11,9 @@ module InstagramGraphApi
 
       MEDIA_INFO_HASH = {
         "image": "comments_count,like_count,media_type,"\
-                    "media_url,permalink,timestamp,thumbnail_url",
+                    "media_url,permalink,timestamp,thumbnail_url,caption",
         "video": "comments_count,like_count,media_type,"\
-                    "media_url,permalink,timestamp,thumbnail_url",
+                    "media_url,permalink,timestamp,thumbnail_url,caption",
         "story": "media_type,media_url,permalink,"\
                       "timestamp,thumbnail_url"
       }

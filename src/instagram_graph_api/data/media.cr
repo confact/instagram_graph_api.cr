@@ -10,6 +10,7 @@ module InstagramGraphApi
       property permalink : String
       property timestamp : Time
       property id : String
+      property caption : String?
       
       #likes and comments only on image and video
       property like_count : Int32?
