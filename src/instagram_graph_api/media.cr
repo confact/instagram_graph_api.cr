@@ -11,11 +11,11 @@ module InstagramGraphApi
 
       MEDIA_INFO_HASH = {
         "image": "comments_count,like_count,media_type,"\
-                    "media_url,permalink,timestamp,thumbnail_url,caption",
+                    "media_url,permalink,timestamp,thumbnail_url,caption,shortcode,media_product_type,video_url",
         "video": "comments_count,like_count,media_type,"\
-                    "media_url,permalink,timestamp,thumbnail_url,caption",
+                    "media_url,permalink,timestamp,thumbnail_url,caption,shortcode,media_product_type,video_url",
         "story": "media_type,media_url,permalink,"\
-                      "timestamp,thumbnail_url"
+                      "timestamp,thumbnail_url,shortcode,media_product_type,video_url"
       }
 
       def user_recent_media(id : String, fields = nil, type = "image", options = {} of String => String)

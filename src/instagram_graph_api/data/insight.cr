@@ -15,7 +15,7 @@ module InstagramGraphApi
       struct InsightValue
         include JSON::Serializable
 
-        property value : Int64
+        property value : Int32
       end
     end
   end 

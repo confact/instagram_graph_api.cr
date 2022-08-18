@@ -11,10 +11,37 @@ module InstagramGraphApi
       property timestamp : Time
       property id : String
       property caption : String?
+      property shortcode : String
+      property media_product_type : String
+      property video_url : String? # only for reels and video
       
       #likes and comments only on image and video
       property like_count : Int32?
       property comments_count : Int32?
+
+      def likes
+        like_count
+      end
+
+      def comments
+        comments_count
+      end
+
+      def date
+        timestamp
+      end
+
+      def code
+        shortcode
+      end
+
+      def is_video
+        media_type == "VIDEO" || media_type == "REEL"
+      end
+
+      def display_src
+        media_url || thumbnail_url || ""
+      end
     end
   end 
 end
