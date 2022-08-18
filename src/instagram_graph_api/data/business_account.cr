@@ -4,8 +4,8 @@ module InstagramGraphApi
       include JSON::Serializable
 
       property id : String
-      property name : String
-      property biography : String
+      property name : String = ""
+      property biography : String = ""
       property username : String
       property ig_id : Int64
 
