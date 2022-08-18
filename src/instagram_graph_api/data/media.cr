@@ -41,6 +41,24 @@ module InstagramGraphApi
       def is_video
         media_type == "VIDEO" || media_type == "REEL"
       end
+    
+      def post_type : String
+        return "reels" if media_product_type == "REELS"
+        case media_type
+        when "CAROUSEL_ALBUM"
+          "image"
+        when "IMAGE"
+          "image"
+        when "VIDEO"
+          "video"
+        when "REELS"
+          "reels"
+        when "STORY"
+          "story"
+        else
+          "image"
+        end
+      end
 
       def display_src
         media_url || thumbnail_url || ""
