@@ -1,5 +1,5 @@
 # TODO: Write documentation for `InstagramGraphApi`
-require "./instagram_graph_api/*"
+require "./instagram_graph_api/**"
 module InstagramGraphApi
   VERSION = "0.1.0"
 
