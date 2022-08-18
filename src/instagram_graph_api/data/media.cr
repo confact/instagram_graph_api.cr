@@ -62,7 +62,7 @@ module InstagramGraphApi
       end
 
       def display_src
-        media_url || thumbnail_url || ""
+        media_url || video_url || thumbnail_url || ""
       end
     end
   end 
