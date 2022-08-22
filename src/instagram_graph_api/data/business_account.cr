@@ -12,6 +12,8 @@ module InstagramGraphApi
       property followers_count : Int32
       property media_count : Int32?
       property website : String?
+      property impressions : Int32?
+      property reach : Int32?
 
       property profile_picture_url : String
 
